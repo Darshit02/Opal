@@ -2,6 +2,8 @@ import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
 import CreateWorkspace from "@/components/global/create-workspace";
+import CreateForlders from "@/components/global/create-foulder";
+import Folders from "@/components/global/folders";
 
 type Props = {
   params: {
@@ -37,12 +39,12 @@ const WorkSpace = async ({ params }: Props) => {
           </TabsList>
           <div className="flex gap-x-3">
             <CreateWorkspace />
-            {/* <CreateForlders workspaceId={workspaceId} /> */}
+            <CreateForlders workspaceId={workspaceId} />
           </div>
         </div>
         <section className="py-9">
           <TabsContent value="videos">
-            {/* <Folders workspaceId={workspaceId} /> */}
+            <Folders workspaceId={workspaceId} />
           </TabsContent>
         </section>
       </Tabs>
