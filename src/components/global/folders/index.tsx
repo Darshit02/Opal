@@ -56,54 +56,6 @@ const Folders = ({ workspaceId }: Props) => {
   const hasError = !isPending && status !== 200;
 
   return (
-    // <div
-    //   className="flex flex-col gap-4"
-    //   suppressHydrationWarning
-    // >
-    //   <div className="flex items-center  justify-between">
-    //     <div className="flex items-center gap-4">
-    //       <FolderDuotone />
-    //       <h2 className="text-[#BDBDBD] text-xl"> Folders</h2>
-    //     </div>
-    //     <div className="flex items-center gap-2">
-    //       <p className="text-[#BDBDBD]">See all</p>
-    //       <ArrowRight color="#707070" />
-    //     </div>
-    //   </div>
-    //   <div
-    //     className={cn(
-    //       status !== 200 && 'justify-center',
-    //       'flex items-center gap-4 overflow-x-auto w-full'
-    //     )}
-    //   >
-    //     {status !== 200 ? (
-    //       <p className="text-neutral-300">No folders in workspace</p>
-    //     ) : (
-    //       <>
-    //         {latestVariables && latestVariables.status === 'pending' && (
-    //           <Folder
-    //             name={latestVariables.variables.name}
-    //             id={latestVariables.variables.id}
-    //             optimistic
-    //           />
-    //         )}
-    //         {folders.map((folder) => (
-    //           <Folder
-    //             name={folder.name}
-    //             count={folder._count.videos}
-    //             id={folder.id}
-    //             key={folder.id}
-    //           />
-    //         ))}
-    //       </>
-    //     )}
-    //   </div>
-    //   {/* <Videos
-    //     workspaceId={workspaceId}
-    //     folderId={workspaceId}
-    //     videosKey="user-videos"
-    //   /> */}
-    // </div>
     <div className="flex flex-col gap-4" suppressHydrationWarning>
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -118,14 +70,11 @@ const Folders = ({ workspaceId }: Props) => {
 
       <div className="flex items-center gap-4 overflow-x-auto w-full justify-start">
         {/* Show loading message if data is still loading */}
-        {(isPending || isFetching) && (
+        {/* {(isPending || isFetching) && (
           <>
             <Skeleton className="min-w-[250px] h-[60px]" />
-            <Skeleton className="min-w-[250px] h-[60px]" />
-            <Skeleton className="min-w-[250px] h-[60px]" />
-            <Skeleton className="min-w-[250px] h-[60px]" />
           </>
-        )}
+        )} */}
         {/* Show error message if data fetching encountered an error */}
         {hasError && (
           <p className="text-red-500">
